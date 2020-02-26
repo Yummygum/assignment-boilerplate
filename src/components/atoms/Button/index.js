@@ -5,51 +5,77 @@ import PropTypes from 'prop-types'
 // Styles
 import './button.scss'
 
-Button.propTypes = {
-  variation: PropTypes.string, // primary, secondary
-  to: PropTypes.string, // For internal links
-  url: PropTypes.string, // External links
-  size: PropTypes.string, // M, L, XL
-  layer: PropTypes.string, // layer-1, layer-2 or layer-3
-  isDisabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  text: PropTypes.string
-}
-
 function Button({
-  variation, to, url, size, layer, isDisabled, onClick, text
+  variation = 'primary',
+  size = 'm',
+  isDisabled,
+  children,
+  onClick,
+  url,
+  to
 }) {
   return to ? (
     <Link href={to}>
       <button
+        type="button"
+        onClick={onClick}
         className={`
           button
-          ${layer || 'layer-1'}
-          ${variation || 'primary'}
-          ${size || 'medium'}
+          ${variation}
+          ${size}
           ${isDisabled ? 'disabled' : ''}
         `}
+        disabled={isDisabled}
       >
-        {text}
+        {children}
       </button>
     </Link>
-  ) : (
+  ) : url ? (
     <a
       href={url}
-      type="button"
       onClick={onClick}
       className={`
         button
-        ${layer || 'layer-1'}
         ${variation || 'primary'}
         ${size || 'medium'}
         ${isDisabled ? 'disabled' : ''}
       `}
       disabled={isDisabled}
     >
-      {text}
+      {children}
     </a>
+  ) : (
+    <button
+      className={`
+        button
+        ${variation}
+        ${size}
+        ${isDisabled ? 'disabled' : ''}
+      `}
+      disabled={isDisabled}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   )
+}
+
+Button.propTypes = {
+  variation: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary'
+  ]),
+  size: PropTypes.oneOf([
+    'm',
+    'l',
+    'xl'
+  ]),
+  isDisabled: PropTypes.bool,
+  children: PropTypes.any,
+  onClick: PropTypes.func,
+  url: PropTypes.string,
+  to: PropTypes.string
 }
 
 export default Button

@@ -7,180 +7,57 @@
   cursor: pointer;
   transition: background-color .2s;
 
-  &:focus {
-    outline: none;
-  }
-
-  &.medium {
-    @extend .title-layer2-100;
+  &.m {
     padding: 8px 32px;
   }
 
-  &.large {
-    @extend .title-layer2-100;
+  &.l {
     padding: 12px 32px;
   }
 
-  &.extralarge {
-    @extend .title-layer2-200;
+  &.xl {
     padding: 14px 32px;
+  }
+
+  &.primary {
+    background-color: gray;
+    color: white;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &.disabled {
+      opacity: .1;
+    }
+
+    &:focus {
+      border: 2px solid var(--ml-100);
+      outline: 2px solid var(--ml-800);
+      outline-offset: -4px;
+    }
+  }
+
+  &.secondary {
+    background-color: white;
+    color: gray;
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &.disabled {
+      opacity: .1;
+    }
+
+    &:focus {
+      border: 1px solid var(--ml-100);
+      outline: 1px solid var(--ml-100);
+      outline-offset: -4px;
+    }
   }
 
   &.disabled {
     cursor: default;
-  }
-
-  &.layer-1 {
-    &.medium {
-      @extend .title-layer1-100;
-      padding: 8px 32px;
-    }
-
-    &.large {
-      @extend .title-layer1-100;
-      padding: 12px 32px;
-    }
-
-    &.extralarge {
-      @extend .title-layer1-200;
-      padding: 14px 32px;
-    }
-
-    &.primary {
-      background-color: var(--ml-100);
-      color: var(--ec-800);
-
-      &:hover {
-        background-color: var(--ec-300);
-      }
-
-      &.disabled {
-        background-color: var(--ec-500);
-        color: var(--ex-600);
-      }
-
-      &:focus {
-        border: 2px solid var(--ml-100);
-        outline: 2px solid var(--ml-800);
-        outline-offset: -4px;
-      }
-    }
-
-    &.secondary {
-      background-color: var(--ec-800);
-      color: var(--ml-100);
-      outline: 2px solid var(--ml-100);
-      outline-offset: -2px;
-
-      &:hover {
-        background-color: var(--ec-700);
-      }
-
-      &.disabled {
-        background-color: var(--ec-700);
-        color: var(--ec-500);
-        outline-color: var(--ec-500);
-      }
-
-      &:focus {
-        border: 1px solid var(--ml-100);
-        outline: 1px solid var(--ml-100);
-        outline-offset: -4px;
-      }
-    }
-  }
-
-  &.layer-2 {
-    font-weight: bold;
-
-    &.primary {
-      background-color: var(--ml-900);
-      color: var(--ml-100);
-
-      &:hover {
-        background-color: var(--ml-700);
-      }
-
-      &.disabled {
-        background-color: var(--ml-400);
-        color: var(--ml-300);
-      }
-
-      &:focus {
-        border: 2px solid var(--ml-900);
-        outline: 2px solid var(--ml-100);
-        outline-offset: -4px;
-      }
-    }
-
-    &.secondary {
-      background-color: var(--ml-100);
-      color: var(--ml-900);
-      outline: 2px solid var(--ml-900);
-      outline-offset: -2px;
-
-      &:hover {
-        background-color: var(--ml-200);
-      }
-
-      &.disabled {
-        background-color: var(--ml-200);
-        color: var(--ml-400);
-        outline-color: var(--ml-300);
-      }
-
-      &:focus {
-        border: 1px solid var(--ml-900);
-        outline: 1px solid var(--ml-900);
-        outline-offset: -4px;
-      }
-    }
-  }
-
-  &.layer-3 {
-    font-weight: bold;
-
-    &.primary {
-      background-color: var(--ml-100);
-      color: var(--dd-800);
-
-      &:hover {
-        background-color: var(--dd-300);
-      }
-
-      &.disabled {
-        background-color: var(--dd-500);
-        color: var(--dd-600);
-      }
-
-      &:focus {
-        border: 2px solid var(--ml-100);
-        outline: 2px solid var(--ml-800);
-        outline-offset: -4px;
-      }
-    }
-
-    &.secondary {
-      background-color: var(--dd-800);
-      color: var(--ml-100);
-      outline: 2px solid var(--ml-100);
-      outline-offset: -2px;
-
-      &:hover {
-        background-color: var(--dd-700);
-      }
-
-      &.disabled {
-        background-color: var(--dd-700);
-        color: var(--dd-500);
-        outline-color: var(--dd-500);
-      }
-
-      &:focus {
-        border: 1px solid var(--ml-100);
-        outline: 1px solid var(--ml-100);
-        outline-offset: -4px;
-      }
-    }
   }
 }
