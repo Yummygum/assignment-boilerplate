@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-standard",
+    "stylelint-8-point-grid"
+  ],
+  "rules": {
+    "length-zero-no-unit": true,
+    "max-empty-lines": 1,
+    "number-leading-zero": "never",
+    "indentation": 2,
+    "function-comma-space-after": "always",
+    "declaration-empty-line-before": null,
+    "color-hex-case": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "function-calc-no-invalid": true,
+    "property-no-unknown": [
+      true,
+      ignoreProperties: [
+        "resize-mode",
+        "shadow-color",
+        "shadow-offset",
+        "shadow-radius",
+        "shadow-opacity"
+      ]
+    ],
+    "plugin/8-point-grid": {
+      "base": 4,
+      "whitelist": ["-7px", "-6px", "-2px", "-1px", "0px", "1px", "2px", "6px", "10px", "14px", "22px"],
+      "ignore": [
+        "width",
+        "height",
+        "max-height",
+        "min-height",
+        "max-width",
+        "min-width",
+        "top",
+        "right",
+        "left"
+      ]
+    },
+    "rule-empty-line-before": [
+      "always-multi-line",
+      except: [
+        "first-nested",
+        "after-single-line-comment"
+      ]
+    ],
+  }
+}

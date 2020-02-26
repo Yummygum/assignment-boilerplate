@@ -1,0 +1,126 @@
+@import "./variables";
+
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+
+  @media screen and (max-width: $bp-desktop-md) {
+    font-size: 60px;
+    line-height: 78px;
+  }
+
+  @media screen and (max-width: $bp-desktop-sm) {
+    font-size: 58px;
+    line-height: 74px;
+  }
+
+  @media screen and (max-width: $bp-tablet-md) {
+    font-size: 44px;
+    line-height: 60px;
+  }
+
+  @media screen and (max-width: $bp-mobile-lg) {
+    font-size: 34px;
+    line-height: 48px;
+  }
+
+  @media screen and (max-width: $bp-mobile-md) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 60px;
+
+  @media screen and (max-width: $bp-desktop-md) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: $bp-tablet-md) {
+    font-size: 34px;
+    line-height: 48px;
+  }
+
+  @media screen and (max-width: $bp-mobile-lg) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @media screen and (max-width: $bp-mobile-md) {
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 44px;
+
+  @media screen and (max-width: $bp-desktop-sm) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: $bp-tablet-md) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  @media screen and (max-width: $bp-mobile-lg) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media screen and (max-width: $bp-mobile-md) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+h4 {
+  font-size: 23px;
+  line-height: 32px;
+
+  @media screen and (max-width: $bp-desktop-sm) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: $bp-tablet-md) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: $bp-mobile-lg) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: $bp-mobile-md) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 30px;
+
+  @media screen and (max-width: $bp-tablet-md) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+
+  @media screen and (max-width: $bp-mobile-lg) {
+    line-height: 28px;
+  }
+}

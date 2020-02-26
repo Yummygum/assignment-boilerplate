@@ -1,0 +1,7 @@
+body {
+  font-family: $base-font;
+  background-color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  color: var(--white);
+}

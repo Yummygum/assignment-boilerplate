@@ -1,0 +1,24 @@
+// Base Fonts
+$base-font: -apple-system, BlinkMacSystemFont, Lato, "Segoe UI", Verdana, Arial, sans-serif;
+
+:root {
+  // Colors
+  --black: #000;
+  --white: #fff;
+}
+
+// Breakpoints
+$bp-mobile-sm: 320px;
+$bp-mobile-md: 375px;
+$bp-mobile-lg: 414px;
+$bp-tablet-sm: 562px;
+$bp-tablet-md: 768px;
+$bp-desktop-sm: 1120px;
+$bp-desktop-md: 1280px;
+$bp-desktop-lg: 1536px;
+
+// Transitions
+$transition-200: all .2s ease;
+$transition-300: all .3s ease;
+$transition-400: all .4s ease;
+$transition-500: all .5s ease;
