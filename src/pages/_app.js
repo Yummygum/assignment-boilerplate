@@ -3,16 +3,12 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
-// Verion number
-import Version from '../components/atoms/Version'
-import { version } from '../../package.json'
-
 // Styling
 import '../styles/index.scss'
 
 const metaData = {
-  name: `Next boilerplate ${version}`,
-  description: 'This is a Next boilerplate'
+  name: 'Assignment boilerplate',
+  description: 'This is a Assignment boilerplate'
 }
 
 function MyApp({ Component, pageProps }) {
@@ -41,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           images: [
             {
               url: '/favicons/meta-img.png',
-              alt: 'Next boilerplate',
+              alt: 'Assignment boilerplate'
             }
           ],
           site_name: name,
@@ -49,10 +45,10 @@ function MyApp({ Component, pageProps }) {
         twitter={{
           handle: '@yummygum',
           site: '@yummygum',
-          cardType: 'summary_large_image',
+          cardType: 'summary_large_image'
         }}
       />
-      <Version currentVersion={version} />
+
       <Component {...pageProps} />
     </>
   )

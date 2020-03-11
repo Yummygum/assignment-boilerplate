@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 // Styles
@@ -10,41 +10,9 @@ function Button({
   size = 'm',
   isDisabled,
   children,
-  onClick,
-  url,
-  to
+  onClick
 }) {
-  return to ? (
-    <Link href={to}>
-      <button
-        type="button"
-        onClick={onClick}
-        className={`
-          button
-          ${variation}
-          ${size}
-          ${isDisabled ? 'disabled' : ''}
-        `}
-        disabled={isDisabled}
-      >
-        {children}
-      </button>
-    </Link>
-  ) : url ? (
-    <a
-      href={url}
-      onClick={onClick}
-      className={`
-        button
-        ${variation || 'primary'}
-        ${size || 'medium'}
-        ${isDisabled ? 'disabled' : ''}
-      `}
-      disabled={isDisabled}
-    >
-      {children}
-    </a>
-  ) : (
+  return (
     <button
       className={`
         button
@@ -73,9 +41,7 @@ Button.propTypes = {
   ]),
   isDisabled: PropTypes.bool,
   children: PropTypes.any,
-  onClick: PropTypes.func,
-  url: PropTypes.string,
-  to: PropTypes.string
+  onClick: PropTypes.func
 }
 
 export default Button

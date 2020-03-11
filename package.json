@@ -1,7 +1,7 @@
 {
-  "name": "next-boilerplate",
-  "version": "0.0.1",
-  "description": "Next boilerplate",
+  "name": "assignment-boilerplate",
+  "version": "0.1.0",
+  "description": "Assignment boilerplate",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -17,7 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/yummygum/next-boilerplate#readme",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "framer-motion": "^1.8.3",
@@ -56,10 +55,5 @@
     "stylelint-8-point-grid": "^0.2.3",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^19.0.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
